@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="bootstrap-4.2.1-dist/css/bootstrap.css">
+    <script src="jquery-3.3.1.slim.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.14.6/umd/popper.js"></script>
+    <script src="bootstrap-4.2.1-dist/js/bootstrap.min.js"></script>
+    <link href="font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
+    <style>
+        i{
+            border: 1px solid black;   /*定义边框*/
+            border-radius: 50%;        /*定义圆角边框*/
+            padding: 5px;              /*定义内边距*/
+        }
+        i:hover {
+            background: #00aa88;       /*定义背景色*/
+            color: white;              /*定义字体颜色*/
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-light bg-light mt-3">
+    <a class="navbar-brand" href="#">LOGO</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">首页</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">关于我们</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">联系我们</a>
+            </li>
+        </ul>
+        <div>
+            <a href="#"><i class="fa fa-shopping-cart mr-3"></i></a>
+            <a href="#" data-toggle="collapse" data-target="#collapseExample">
+                <i class="fa fa-search"></i>
+            </a>
+        </div>
+    </div>
+</nav>
+<div class="d-flex justify-content-end mr-3">
+    <div class="collapse" id="collapseExample">
+        <div class="form-group form-inline">
+            <input type="search" class="form-control mr-2"><a href="#" class="btn btn-primary">搜索</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

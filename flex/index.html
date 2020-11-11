@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        ul{
+            display: flex;
+            width: 100vw;
+            height: 400px;
+            border: 1px solid #008c8c;
+            flex-direction: row;
+        }
+        ul li{
+            border: 1px solid #008c8c;
+            margin: 10px;
+            flex:1;
+        }
+        ul li:nth-child(1){
+            flex:1 ;
+        }
+        ul li:nth-child(2){
+            flex:auto;
+        }
+        ul li:nth-child(3){
+            flex:1;
+        }
+        /* ul li a{
+        } */
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">链接-1</a></li>
+        <li><a href="#">链接-1</a></li>
+        <li><a href="#">链接-1</a></li>
+    </ul>
+</body>
+</html>

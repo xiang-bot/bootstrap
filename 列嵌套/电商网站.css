@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.product-grid .product-image img {
+    width: 100%;
+    height: auto;
+}
+
+.product-grid {
+    text-align: center;
+    position: relative;
+}
+
+.product-grid .product-image {
+    overflow: hidden;
+}
+
+div.product-grid:hover .product-image img {
+    transform: scale(1.4);
+    transition: all .5s ease;
+}
+
+
+/*
+    产品说明 价格区域
+*/
+
+.product-grid .procutor-content {
+    /* border: 1px solid black; */
+    padding: 12px 15px;
+}
+
+h3.title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 10px;
+}
+
+.procutor-content .title a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.procutor-content .title a:hover {
+    color: #008c8c;
+}
+
+.procutor-content .price {
+    color: blue;
+    font-weight: 600;
+    color: #2e86de;
+    text-decoration: line-through;
+    /*删除线*/
+}
+
+.product-grid .social {
+    width: 100%;
+    position: absolute;
+    bottom: -50%;
+    opacity: 0;
+}
+
+.product-grid:hover .social {
+    opacity: 1;
+    bottom: 5px;
+    transition: all .5s;
+}
+
+ul.social li {
+    /* display: flex;
+    justify-content: center;
+    align-content: flex-end; */
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.social li a {
+    color: #909090;
+    font-size: 16px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border: 1px solid #909090;
+    border-radius: 50%;
+    width: 45px;
+    display: block;
+    margin: 0 7px;
+}
+
+.social li a:hover {
+    /* transform: translateY(-100px);
+    transition: 1.2s; */
+    color: #fff;
+    background-color: #008c8c;
+}
+
+.product-grid:hover .procutor-content {
+    opacity: 0;
+}
+
+
+/*动画效果*/

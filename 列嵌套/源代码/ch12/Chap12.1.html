@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="bootstrap-4.2.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+    <script src="jquery-3.3.1.slim.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.14.6/umd/popper.js"></script>
+    <script src="bootstrap-4.2.1-dist/js/bootstrap.min.js"></script>
+</head>
+<body class="container">
+<h2 class="mb-4">定义折叠</h2>
+<p>
+    <a class="btn btn-primary" data-toggle="collapse" href="#collapse">&lt; a &gt;触发折叠</a>
+    <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#collapse1">&lt; button &gt;触发折叠</button>
+</p>
+<div class="collapsing" id="collapse">
+    <div class="card card-body">
+        这是&lt; a &gt;触发的折叠内容
+    </div>
+</div>
+<div class="collapse" id="collapse1">
+    <div class="card card-body">
+        这是&lt; button &gt;触发的折叠内容
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="bootstrap-4.2.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+    <script src="jquery-3.3.1.slim.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.14.6/umd/popper.js"></script>
+    <script src="bootstrap-4.2.1-dist/js/bootstrap.min.js"></script>
+    <style>
+        .del{
+            border: 2px solid white!important;       /*定义边框*/
+            padding: 3px 8px 5px!important;         /*定义内边距*/
+            border-radius: 50%;                     /*定义圆角边框*/
+            display: inline-block;                  /*定义行内块级*/
+            position: absolute;                     /*定义绝对定位*/
+            right: 2px;                             /*距离右侧2px*/
+            top: 2px;                               /*距离顶部2px*/
+            background:#F72943!important;           /*定义背景色*/
+        }
+        .redWars{
+            border: 1px solid white!important;       /*定义边框*/
+            padding: 15px 26px!important;            /*定义内边距*/
+            border-radius: 50%;                     /*定义圆角边框*/
+            font-size: 40px;                        /*定义字体大小*/
+            color: #F72943;                         /*定义字体颜色*/
+            background: yellow;                     /*定义背景色*/
+            display: inline-block;                  /*定义行内块级元素*/
+            position: absolute;                     /*定义绝对定位*/
+            left: 105px;                            /*距离左侧105px*/
+            top: 260px;                            /*距离顶部260px*/
+        }
+    </style>
+</head>
+<body class="container">
+<div class="modal fade" id="myModal" >
+    <div class="modal-dialog modal-dialog-centered" role="document" style="width: 300px">
+        <div class="modal-content">
+            <button type="button" class="close del" data-dismiss="modal">
+                <span >&times;</span>
+            </button>
+            <img src="images/07.png" alt="" class="img-fluid rounded">
+            <a href="#" class="btn redWars">抢</a>
+        </div>
+
+    </div>
+</div>
+<script>
+    $(function(){
+        $('#myModal').modal('show');
+    });
+</script>
+
+</body>
+</html>

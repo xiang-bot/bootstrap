@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="bootstrap-4.2.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+    <script src="jquery-3.3.1.slim.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.14.6/umd/popper.js"></script>
+    <script src="bootstrap-4.2.1-dist/js/bootstrap.min.js"></script>
+</head>
+<body class="container">
+<div class="alert alert-warning fade show">
+    <strong>警告提示！</strong> 程序中出现一个语法问题。
+    <button type="button" class="close" >
+        <span>&times;</span>
+    </button>
+</div>
+<!-- 模态框 -->
+<div class="modal" id="Modal-test">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle">提示</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">你确定要关闭警告框吗？</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">是</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">否</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    $(function(){
+        $(".close").click(function(){
+            $(this).alert("close")
+        })
+        $(".alert").on("close.bs.alert",function(e){
+            $("#Modal-test").modal();
+        })
+    })
+</script>
+
+</html>

@@ -1,0 +1,86 @@
+body{
+    background: #ececec;         /*定义主体背景色*/
+    font-family: 微软雅黑;      /*定义主体字体颜色*/
+}
+.header-size{
+    font-size: 2rem;            /*定义字体大小*/
+}
+.size1{
+    font-size: 0.8rem;          /*定义字体大小*/
+}
+.number1{
+    padding: 0.3rem 0.65rem;    /*定义内边距*/
+    background: red;            /*定义背景颜色*/
+    color: white;               /*定义字体颜色*/
+    font-size: 12px;            /*定义字体大小*/
+}
+.number2{
+    padding: 0.3rem 0.65rem;    /*定义内边距*/
+    background: blue;           /*定义背景颜色*/
+    color: white;               /*定义字体颜色*/
+    font-size: 12px;            /*定义字体大小*/
+}
+.number3{
+    padding: 0.3rem 0.65rem;    /*定义内边距*/
+    background: #ffac2b;        /*定义背景颜色*/
+    color: white;               /*定义字体颜色*/
+    font-size: 12px;            /*定义字体大小*/
+}
+.border1{
+    height: 20px;              /*定义高度*/
+    display: inline-block;     /*定义行内块级元素*/
+    border:3px solid red;      /*定义边框*/
+}
+.border2{
+    height: 20px;              /*定义高度*/
+    display: inline-block;     /*定义行内块级元素*/
+    border:3px solid blue;     /*定义边框*/
+}
+.list-group-item {
+    padding: 0.5rem 1rem;      /*定义内边距*/
+}
+.color1{
+    font-size: 1rem;          /*定义字体大小*/
+    font-weight: bold;        /*定义字体加粗*/
+    margin: 10px 0 5px;       /*定义内边距*/
+}
+.color1:hover{
+    color: red;              /*定义字体颜色*/
+}
+.scale img:hover{
+    transform: scale(1.05);  /*定义2D缩放*/
+}
+.color2{
+    font-size: 0.8rem;      /*定义字体大小*/
+    color: grey;            /*定义字体颜色*/
+}
+.color2:hover{
+    color: black;           /*定义字体颜色*/
+}
+.color3{
+    font-size: 1rem;        /*定义字体大小*/
+    color: black;           /*定义字体颜色*/
+}
+.color3:hover{
+    color: red;            /*定义字体颜色*/
+}
+.color4{
+    font-size: 0.9rem;     /*定义字体大小*/
+}
+.color4:hover{
+    background: #00cc00;    /*定义背景色*/
+    color: white;           /*定义字体颜色*/
+}
+.card-header{
+    border: 0;              /*定义边框为0px*/
+    background: #dedede;    /*定义背景颜色*/
+    font-size: 1rem;        /*定义字体大小*/
+    border-left: 3px solid #00cc00;    /*定义左边边框*/
+}
+.footer{
+    border-top:2px solid white;    /*定义顶部边框*/
+}
+.footer a, .size2{font-size: 0.8rem;            /*定义字体大小*/color: black;                 /*定义字体颜色*/
+}
+.footer a:hover{color: red;                   /*定义字体颜色*/}
+

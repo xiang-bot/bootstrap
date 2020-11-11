@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../boot/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+            <h3>覆盖所有的设备</h3>
+        <div class="row">
+            <!-- 使用col匹配所有的设备 -->
+            <div class="border bg-light py-3 col">col</div>
+            <div class="border bg-light py-3 col">col</div>
+            <div class="border bg-light py-3 col">col</div>
+            <div class="border bg-light py-3 col">col</div>
+        </div>
+
+        <!-- 使用.col-匹配所有的设备 -->
+        <div class="row">
+            <div class="border bg-light py-3 col-8">col-8</div>
+            <div class="border bg-light py-3 col">col-2</div>
+            <div class="border bg-light py-3 col">col-2</div>
+        </div>
+    </div>
+</body>
+</html>

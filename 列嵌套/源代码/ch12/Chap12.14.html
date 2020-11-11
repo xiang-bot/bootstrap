@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="bootstrap-4.2.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+    <script src="jquery-3.3.1.slim.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.14.6/umd/popper.js"></script>
+    <script src="bootstrap-4.2.1-dist/js/bootstrap.min.js"></script>
+</head>
+<body class="container">
+<h3 class="mb-4">交叉淡入淡出效果</h3>
+<div id="Carousel" class="carousel slide carousel-fade">
+    <!--标识图标-->
+    <ol class="carousel-indicators">
+        <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#Carousel" data-slide-to="1"></li>
+        <li data-target="#Carousel" data-slide-to="2"></li>
+    </ol>
+    <!--幻灯片-->
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-interval="1000">
+            <img src="image/002.png" class="d-block w-100" alt="">
+        </div>
+        <div class="carousel-item" data-interval="2000">
+            <img src="image/003.png" class="d-block w-100" alt="">
+        </div>
+        <div class="carousel-item" data-interval="3000">
+            <img src="image/004.png" class="d-block w-100" alt="">
+        </div>
+    </div>
+    <!--控制按钮-->
+    <a class="carousel-control-prev" href="#Carousel" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#Carousel" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+</div>
+</body>
+
+<script>
+    $(function(){
+        $('.carousel').carousel({
+            interval:3000,
+            keyboard:true
+        });
+    })
+</script>
+</html>

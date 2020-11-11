@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap-4.2.1-dist/css/bootstrap.css">
+    <script src="jquery-3.3.1.slim.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.14.6/umd/popper.js"></script>
+    <script src="bootstrap-4.2.1-dist/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        body {
+            background: #efeeea;      /*定义背景色*/
+            color: #757575;           /*定义字体颜色*/
+        }
+        .wrapper {
+            width: 350px;             /*定义宽度*/
+            margin: 100px auto;       /*定义外边距*/
+        }
+        .wrapper .load-bar {
+            width: 100%;              /*定义宽度*/
+            height: 25px;             /*定义高度*/
+            border-radius: 30px;      /*定义圆角*/
+            background: #dcdbd7;      /*定义背景色*/
+            position: relative;       /*定义相对定位*/
+        }
+        .wrapper .load-bar-inner {
+            height: 99%;                      /*定义高度*/
+            width: 0%;                        /*定义宽度*/
+            border-radius: inherit;           /*继承父元素的圆角*/
+            position: relative;               /*定义相对定位*/
+            background: #c2d7ac;              /*定义背景色*/
+            animation: loader 10s linear infinite;       /*定义动画*/
+        }
+        @keyframes loader {
+            from {width: 0%;}
+            to {width: 100%;}
+        }
+        .wrapper #counter {
+            position: absolute;                 /*定义绝对定位*/
+            background: #eeeff3;                /*定义背景色*/
+            background: linear-gradient(#eeeff3, #cbcbd3);     /*定义渐变色*/
+            padding: 5px 10px;                         /*定义内边距*/
+            border-radius: 0.4em;                      /*定义圆角边框*/
+            left: -25px;                               /*距离左侧-25px*/
+            top: -50px;                                /*距离顶部-50px*/
+            font-size: 12px;                           /*定义字体大小*/
+            font-weight: bold;                         /*定义字体加粗*/
+            width: 44px;                               /*定义宽度*/
+            animation: counter 10s linear infinite;    /*定义动画*/
+        }
+        .wrapper #counter:after {
+            content: "";                              /*插入内容*/
+            position: absolute;                       /*定义绝对定位*/
+            width: 10px;                              /*定义宽度*/
+            height: 10px;                             /*定义高度*/
+            background: #cbcbd3;                      /*定义背景色*/
+            transform: rotate(45deg);                 /*定义旋转*/
+            left: 50%;                                /*距离左侧50%*/
+            margin-left: -4px;                        /*左侧外边距-4px*/
+            bottom: -4px;                             /*距离底边-4px*/
+            border-radius: 0 0 3px 0;                 /*定义圆角边框*/
+        }
+        @keyframes counter {
+            from {left:-25px;}
+            to {left: 323px;}
+        }
+        .wrapper .load-bar:hover .load-bar-inner, .wrapper .load-bar:hover #counter {
+            animation-play-state: paused;      /*停止动画*/
+        }
+        .wrapper h1 {
+            font-size: 28px;                   /*定义字体大小*/
+            padding: 20px 0 8px 0;             /*定义内边距*/
+        }
+        .wrapper p {
+            font-size: 13px;                   /*定义字体大小*/
+        }
+    </style>
+    <script>
+        $(function(){
+            //定义定时器，0.1秒调用一次increment()方法
+            var interval = setInterval(increment,100);
+            var current = 0;
+            // 定义increment()方法
+            function increment(){
+                // 定时器没调用一次，自增1
+                current++;
+                //设置指示器的内容
+                $('#counter').html(current+'%');
+                //当current变量值为100时重置，current = 0
+                if(current == 100) { current = 0;}
+            }
+            //当鼠标悬浮在load-bar上时，清除定时器。
+            $('.load-bar').mouseover(function(){
+                clearInterval(interval);
+            })
+            //当鼠标移开load-bar时，启动定时器。
+                .mouseout(function(){
+                    interval = setInterval(increment,100);
+                });
+        });
+    </script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="load-bar">
+        <div class="load-bar-inner">
+            <span id="counter"></span>
+        </div>
+    </div>
+    <h1 class="text-center"><span class="spinner-border mr-4"></span>Loading...</h1>
+</div>
+</body>
+</html>

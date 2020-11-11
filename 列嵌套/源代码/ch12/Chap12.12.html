@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="bootstrap-4.2.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+    <script src="jquery-3.3.1.slim.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.14.6/umd/popper.js"></script>
+    <script src="bootstrap-4.2.1-dist/js/bootstrap.min.js"></script>
+</head>
+<body class="container">
+<h2 class="mb-5">弹窗事件</h2>
+<button type="button" class="btn btn-info ml-5" data-toggle="popover" id="myPopover">弹窗</button>
+<script>
+    $(function () {
+        $('#myPopover').popover({
+            title:"弹窗标题",     //弹窗标题
+            content:"弹窗内容",   //显示内容
+            trigger:"click",      //鼠标单击时触发
+        });
+        $('#myPopover').on('show.bs.popover', function () {
+            $(this).removeClass("btn-info").addClass("btn-primary");
+            alert("show.bs.popover");
+        })
+        $('#myPopover').on('inserted.bs.popover', function () {
+            $(this).removeClass("btn-primary").addClass("btn-danger");
+            alert("inserted.bs.popover");
+        })
+        $('#myPopover').on('shown.bs.popover', function () {
+            $(this).removeClass("btn-danger").addClass("btn-info");
+            alert("shown.bs.popover");
+        })
+        $('#myPopover').on('hide.bs.popover', function () {
+            $(this).removeClass("btn-info").addClass("btn-success");
+            alert("hide.bs.popover");
+        })
+        $('#myPopover').on('hidden.bs.popover', function () {
+            $(this).removeClass("btn-success").addClass("btn-info");
+            alert("hidden.bs.popover");
+        })
+    })
+</script>
+</body>
+</html>

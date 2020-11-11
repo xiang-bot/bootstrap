@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="bootstrap-4.2.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+    <script src="jquery-3.3.1.slim.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.14.6/umd/popper.js"></script>
+    <script src="bootstrap-4.2.1-dist/js/bootstrap.min.js"></script>
+</head>
+<body class="container">
+
+<ul class="nav nav-tabs" id="myTab">
+    <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#image1">图片1</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#image2">图片2</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#image3">图片3</a>
+    </li>
+    <li  class="dropdown nav-item">
+        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">更多内容</a>
+        <ul class="dropdown-menu">
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#image4">图片4</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#image5">图片5</a>
+            </li>
+        </ul>
+    </li>
+</ul>
+<div class="tab-content">
+    <div class="tab-pane fade show active" id="image1">图片1</div>
+    <div class="tab-pane fade" id="image2">图片2</div>
+    <div class="tab-pane fade" id="image3">图片3</div>
+    <div class="tab-pane fade" id="image4">图片4</div>
+    <div class="tab-pane fade" id="image5">图片5</div>
+</div>
+</body>
+<script>
+    $(function(){
+        $('#myTab a').on('click', function (e) {
+            e.preventDefault()
+            $(this).tab('show')
+        })
+        $('#myTab a').on("show.bs.tab",function (e) {
+            alert("旧的选项卡："+e.relatedTarget);    //旧的选项卡
+            alert("将被激活的选项卡："+e.target);    //将要被激活的选项卡
+        })
+    })
+</script>
+</html>

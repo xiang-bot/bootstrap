@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="bootstrap-4.2.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+    <script src="jquery-3.3.1.slim.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.14.6/umd/popper.js"></script>
+    <script src="bootstrap-4.2.1-dist/js/bootstrap.min.js"></script>
+</head>
+<body class="container">
+<h3 class="mb-4">调用工具提示</h3>
+<button type="button" class="btn btn-lg btn-danger ml-5" data-toggle="tooltip">工具提示</button>
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip({
+            animation:true,                    //应用CSS淡入淡出过渡特效
+            html:true,                        //支持HTML字符串
+            offset:"200px",                    //设置偏移位置
+            title:"<img src='image/008.png' width='300' class='img-fluid'>",  //提示内容
+            placement:"right",                  //显示位置
+            trigger:"click",                     //鼠标单击时触发
+            delay:{show:1000,hide:1000}           //显示和延迟的时间
+        });
+    })
+</script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+body{
+    background: url('../images/blue.jpg');
+}
+/* ---------------------nav 样式-----------------------*/
+nav{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+/*--------------------class.html----------------------*/
+.menu{
+    width: 275px;
+    border-radius:10px;
+}
+#myTab{list-style: none;}
+#myTab li{float: left;margin-left: 15px;}
+#myTab li a{
+    color: #919191;
+}
+.ab{
+    color:#00A862!important;
+}
+.list{
+    min-width: 600px;
+}
+.list div{
+    margin-bottom: 20px;
+}
+/*-------------------blog.html--------------------------*/
+.blog-border{
+    border-radius: 10px;
+}
+.retract{
+    text-indent: 2rem;
+}
+.shadow{
+    line-height: 48px;
+    padding:0 10px;
+    margin-bottom: 20px;
+    border-top: 2px solid #d7d7d7;
+    border-bottom: 2px solid #ffffff;
+    background: url(images/light-bg.png) repeat-x;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
